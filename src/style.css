@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+}
+
+:root {
+    --font-size-ten: 0.833rem;
+    --font-size-eleven: 0.917rem;
+    --font-size-twelve: 1rem;
+    --font-size-eight: 0.667rem;
+    --font-size-seven: 0.583rem;
+    --font-size-fourteen: 1.167rem;
+    --font-size-eighteen: 1.5rem;
+    --font-size-fourty: 3.333rem;
+    --green-color: #76cc11;
+    --soft-gray: rgb(245, 245, 245);
+}
+
+.bg {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -9999;
+    display: flex;
+}
+
+.bg .gray-bg {
+    background-color: var(--soft-gray);
+    flex: 0 0 50%;
+}
+
+.bg .white-bg {
+    background-color: white;
+    flex: 0 0 50%;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    min-height: calc(100vh);
+}
+
+.eightpx-text {
+    font-size: var(--font-size-eight);
+}
+
+.gray-text {
+    color: gray;
+}
+
+.details
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 95px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-right: 1rem;
+}
+
+.details .filter-option.pull-left {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.details .abrev {
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.details .btn {
+    padding: 0;
+}
+
+.details .abrev-text-3 {
+    font-weight: 700;
+    font-size: var(--font-size-eighteen);
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 77px;
+}
+.btn-default.active,
+.btn-default:active,
+.btn-default:hover,
+.btn-default:focus,
+.open > .dropdown-toggle.btn-default {
+    background: none !important;
+    outline: none !important;
+}
+
+button {
+    outline: none !important;
+}
+.bootstrap-select .dropdown-toggle:focus {
+    outline: none !important;
+}
+.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
+.btn-default {
+    border: none;
+    outline: none;
+    background-color: var(--soft-gray);
+}
+.filter-option.pull-left {
+    color: var(--soft-gray) !important;
+}
+.container {
+    position: relative;
+    width: fit-content;
+    margin: 0;
+    padding: 0 5px !important;
+}
+
+.left-container {
+    background-color: var(--soft-gray);
+    width: 50%;
+    padding: 0 1rem;
+}
+
+.abrev-text-1,
+.abrev-text-2 {
+    margin: 0;
+    text-align: left;
+}
+.caret {
+    display: none;
+}
+.abrev {
+    background-color: var(--soft-gray);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+    z-index: 99;
+    left: 35px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.angle-icon {
+    margin-left: 0.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: gray !important;
+    font-size: var(--font-size-ten);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+.nav > div {
+    /* flex: 0 0 0; */
+    width: fit-content;
+}
+
+main {
+    display: flex;
+}
+
+main > div {
+    flex: 0 0 50%;
+}
+
+.back-btn {
+    margin-right: auto;
+}
+
+.back-btn a {
+    color: gray;
+    text-decoration: none;
+}
+
+.back-btn:hover a {
+    color: #76cc11;
+}
+
+.back-btn span {
+    margin-left: 0.3rem;
+}
+
+.currency-picker-cont {
+    display: flex;
+    align-items: center;
+}
+
+.currency-picker-cont h1 {
+    font-weight: 800;
+    font-size: var(--font-size-fourty);
+    word-break: break-all;
+}
+
+.currency-picker-cont p {
+    font-size: var(--font-size-fourteen);
+}
+
+.toggle-details {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: var(--green-color);
+    margin: 1rem 0;
+}
+
+.cost-breakdown {
+    margin-bottom: 1rem;
+    font-size: var(--font-size-ten);
+}
+
+.cost-breakdown-wrapper.hide {
+    height: 0;
+    overflow: hidden;
+}
+
+.cost-breakdown .cost {
+    font-weight: 700;
+}
