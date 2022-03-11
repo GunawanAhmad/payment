@@ -212,7 +212,7 @@ main > div {
     font-size: var(--font-size-fourteen);
 }
 
-.toggle-details {
+.toggle-btn {
     background: none;
     box-shadow: none;
     border: none;
@@ -223,11 +223,6 @@ main > div {
 .cost-breakdown {
     margin-bottom: 1rem;
     font-size: var(--font-size-ten);
-}
-
-.cost-breakdown-wrapper.hide {
-    height: 0;
-    overflow: hidden;
 }
 
 .cost-breakdown .cost {

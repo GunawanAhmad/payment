@@ -18,12 +18,10 @@ $(".currency").change(function (e) {
     e.preventDefault();
 });
 
-$(".toggle-details").click(function (e) {
-    if (!$(".cost-breakdown-wrapper").hasClass("hide")) {
-        $(".toggle-details").html("Show details");
-    } else {
-        $(".toggle-details").html("Hide details");
-    }
-    $(".cost-breakdown-wrapper").toggleClass("hide");
-    e.preventDefault();
+$("#detail-cost-collapse").on("hide.bs.collapse", function () {
+    $(".toggle-details").text("Show details");
+});
+
+$("#detail-cost-collapse").on("show.bs.collapse", function () {
+    $(".toggle-details").text("Hide details");
 });
