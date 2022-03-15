@@ -37,8 +37,8 @@
 
     <body>
         <div class="bg">
-            <div class="gray-bg"></div>
             <div class="white-bg"></div>
+            <div class="gray-bg"></div>
         </div>
         <nav class="nav">
             <div class="back-btn">
@@ -296,7 +296,7 @@
                     >
                         <span class="toggle-details">Show details</span>
                     </button>
-                    <div class="collapse" id="detail-cost-collapse">
+                    <div class="collapse accordion" id="detail-cost-collapse">
                         <div class="cost-breakdown-wrapper">
                             <div class="cost-breakdown">
                                 <p>
@@ -340,89 +340,92 @@
                 </div>
             </div>
             <div class="right-container">
-                <h2 class="title">Choose payment method</h2>
                 <div>
-                    <a href="" class="method-container empty">
-                        <div class="img-container">
-                            <p>Payment Method Logo Area</p>
-                        </div>
-                        <p>Payment fee: 1.5% (Total: ZMW1,000,010,000)</p>
-                    </a>
-                    <a href="" class="method-container">
-                        <div class="img-container">
-                            <img src="./src/bca.png" alt="" />
-                        </div>
-                        <p>
-                            Your Gopay balance: IDR1,000,000 | Payment fee: 1.5%
-                            (Total: ZMW1,000,010,000)
-                        </p>
-                    </a>
-                    <a href="" class="method-container inactive">
-                        <div class="img-container">
-                            <img src="./src/bca.png" alt="" />
-                        </div>
-                        <p>
-                            Your Gopay balance: IDR1,000,000 | Payment fee: 1.5%
-                            (Total: ZMW1,000,010,000)
-                        </p>
-                    </a>
-                    <div class="method-container accordion">
-                        <button
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#payment-1"
-                            aria-expanded="false"
-                            aria-controls="detail-cost-collapse"
-                            id="cost-breakdown-btn"
-                        >
-                            <span>
-                                <div class="img-container">
-                                    <img src="./src/bca.png" alt="" />
-                                </div>
-                                <p>
-                                    Your Gopay balance: IDR1,000,000 | Payment
-                                    fee: 1.5% (Total: ZMW1,000,010,000)
-                                </p>
-                            </span>
-                        </button>
-                        <span class="arrow-icon">
-                            <i class="fa-solid fa-angle-down"></i>
-                        </span>
-
-                        <div class="collapse accordion-tab" id="payment-1">
-                            <div>
-                                <label for="input-1"
-                                    >Field title here lorem ipsum
-                                </label>
-                                <input
-                                    type="text"
-                                    id="input-1"
-                                    class="form-control"
-                                />
-                                <p class="help-text">
-                                    Help text here lorem ipsum dolor sit amet
-                                    consectetur adipiscing elit sed do eius
-                                    tempor incididunt ut labore
-                                </p>
+                    <h2 class="title">Choose payment method</h2>
+                    <div>
+                        <a href="" class="method-container empty">
+                            <div class="img-container">
+                                <p>Payment Method Logo Area</p>
                             </div>
-                            <div>
-                                <label for="input-1"
-                                    >Field title here lorem ipsum
-                                </label>
-                                <input
-                                    type="text"
-                                    id="input-1"
-                                    class="form-control"
-                                />
-                                <p class="help-text">
-                                    Help text here lorem ipsum dolor sit amet
-                                    consectetur adipiscing elit sed do eius
-                                    tempor incididunt ut labore
-                                </p>
+                            <p>Payment fee: 1.5% (Total: ZMW1,000,010,000)</p>
+                        </a>
+                        <a href="" class="method-container">
+                            <div class="img-container">
+                                <img src="./src/bca.png" alt="" />
                             </div>
-                            <button class="accordion-btn green-btn">
-                                Continue to payment
+                            <p>
+                                Your Gopay balance: IDR1,000,000 | Payment fee:
+                                1.5% (Total: ZMW1,000,010,000)
+                            </p>
+                        </a>
+                        <a href="" class="method-container inactive">
+                            <div class="img-container">
+                                <img src="./src/bca.png" alt="" />
+                            </div>
+                            <p>
+                                Your Gopay balance: IDR1,000,000 | Payment fee:
+                                1.5% (Total: ZMW1,000,010,000)
+                            </p>
+                        </a>
+                        <div class="method-container accordion">
+                            <button
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#payment-1"
+                                aria-expanded="false"
+                                aria-controls="detail-cost-collapse"
+                                id="cost-breakdown-btn"
+                            >
+                                <span>
+                                    <div class="img-container">
+                                        <img src="./src/bca.png" alt="" />
+                                    </div>
+                                    <p>
+                                        Your Gopay balance: IDR1,000,000 |
+                                        Payment fee: 1.5% (Total:
+                                        ZMW1,000,010,000)
+                                    </p>
+                                </span>
                             </button>
+                            <span class="arrow-icon">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </span>
+
+                            <div class="collapse accordion-tab" id="payment-1">
+                                <div>
+                                    <label for="input-1"
+                                        >Field title here lorem ipsum
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="input-1"
+                                        class="form-control"
+                                    />
+                                    <p class="help-text">
+                                        Help text here lorem ipsum dolor sit
+                                        amet consectetur adipiscing elit sed do
+                                        eius tempor incididunt ut labore
+                                    </p>
+                                </div>
+                                <div>
+                                    <label for="input-1"
+                                        >Field title here lorem ipsum
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="input-1"
+                                        class="form-control"
+                                    />
+                                    <p class="help-text">
+                                        Help text here lorem ipsum dolor sit
+                                        amet consectetur adipiscing elit sed do
+                                        eius tempor incididunt ut labore
+                                    </p>
+                                </div>
+                                <button class="accordion-btn green-btn">
+                                    Continue to payment
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
