@@ -297,7 +297,6 @@ main > div {
 }
 
 .method-container.accordion .accordion-tab button {
-    margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -320,6 +319,7 @@ main > div {
 .help-text {
     font-size: var(--font-size-eight);
     margin-top: 0.2rem;
+    margin-bottom: 1rem;
 }
 
 .accordion-btn {
