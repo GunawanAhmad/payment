@@ -26,6 +26,9 @@ body {
     --font-size-sixteen: 1.333rem;
     --green-color: #76cc11;
     --soft-gray: #fafafa;
+    --bg-gray: rgb(217, 217, 217);
+    --gray: rgb(191, 191, 191);
+    --darker-gray: rgb(127, 127, 127);
 }
 
 .bg {
@@ -61,7 +64,7 @@ main {
 }
 
 .gray-text {
-    color: gray;
+    color: var(--darker-gray);
 }
 
 .details
@@ -95,6 +98,10 @@ main {
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
     width: 77px;
 }
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn).lang {
+    width: 50px;
+}
 .btn-default.active,
 .btn-default:active,
 .btn-default:hover,
@@ -121,11 +128,27 @@ button {
 .filter-option.pull-left {
     color: white !important;
 }
+
+.dropdown-menu.inner {
+    max-height: 300px !important;
+}
 .container {
     position: relative;
     width: fit-content;
     margin: 0;
     padding: 0 5px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.country-container {
+    position: relative;
+}
+
+.country-container .btn {
+    padding-left: 0;
 }
 
 .left-container {
@@ -134,10 +157,6 @@ button {
     padding: 1rem 1rem;
     display: flex;
     justify-content: center;
-}
-
-.left-container > div {
-    /* max-width: 400px; */
 }
 
 .accordion {
@@ -158,22 +177,45 @@ button {
     top: 50%;
     transform: translateY(-55%);
     z-index: 99;
-    left: 35px;
+    left: 18px;
     pointer-events: none;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.nav-icon {
+    margin-right: 0.3rem;
+}
+
+.nav-icon.location {
+    margin-bottom: 0.3rem;
+}
+
+.lang-container .abrev {
+    left: 50% !important;
+    transform: translate(-50%, -55%);
+}
 .angle-icon {
     margin-left: 0.5rem;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+    color: initial;
 }
 
 .nav {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    color: gray !important;
-    font-size: var(--font-size-ten);
+    color: var(--gray) !important;
+    font-size: var(--font-size-eleven);
     padding: 1rem;
     width: 50%;
     padding-bottom: 2rem !important;
@@ -196,7 +238,7 @@ main > div {
 }
 
 .back-btn a {
-    color: gray;
+    color: var(--gray);
     text-decoration: none;
 }
 
@@ -254,6 +296,10 @@ main > div {
     justify-content: center;
 }
 
+.right-container > div {
+    max-width: 500px;
+}
+
 .method-container {
     display: block;
     background-color: var(--soft-gray);
@@ -263,23 +309,31 @@ main > div {
     justify-content: center;
     text-align: center;
     border-radius: 10px;
-    border: 1px solid lightgrey;
-    color: gray;
+    border: 1px solid var(--bg-gray);
+    color: var(--darker-gray);
     font-size: var(--font-size-eight);
     text-decoration: none;
     margin-bottom: 1rem;
     position: relative;
-    width: 100%;
+    min-width: 100%;
+    text-decoration: none;
 }
 
 .img-container {
+    margin: auto;
     margin-bottom: 0.5rem;
-    width: 100%;
+    width: 80%;
     font-size: var(--font-size-eleven);
+    cursor: pointer;
+}
+
+.payment-info {
+    width: 80%;
+    margin: auto;
 }
 
 .method-container.empty .img-container {
-    background-color: lightgrey;
+    background-color: var(--bg-gray);
 }
 
 .method-container.empty .img-container {
@@ -289,14 +343,30 @@ main > div {
     max-width: 80px;
 }
 
+a:link,
+a:visited {
+    color: var(--darker-gray);
+    text-decoration: none;
+    cursor: auto;
+}
+
+a:link:active,
+a:visited:active {
+    color: var(--darker-gray);
+}
+
+.method-container * {
+    text-decoration: none;
+}
+
 .method-container:hover {
     text-decoration: none;
-    color: gray;
     border: 1px solid var(--green-color);
 }
 .method-container.inactive img {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+    opacity: 0.7;
 }
 
 .method-container button {
@@ -308,7 +378,7 @@ main > div {
     text-align: left;
 }
 
-.method-container.accordion .accordion-tab button {
+.method-container.accordion .accordion-tab .continue-btn {
     margin-bottom: 0.5rem;
 }
 
@@ -321,11 +391,17 @@ main > div {
     margin-top: 1rem;
 }
 
+.accordion-tab-inside button {
+    width: 100%;
+}
+
 .arrow-icon {
     font-size: 1.5em;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0rem;
+    color: var(--gray);
 }
 
 .help-text {
@@ -341,6 +417,10 @@ main > div {
     border-radius: 5px;
     color: white;
     font-weight: 700;
+}
+
+.accordion-toggler {
+    position: relative;
 }
 
 .green-btn {
