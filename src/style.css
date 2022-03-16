@@ -329,12 +329,12 @@ main > div {
 }
 
 .back-btn a {
-    color: var(--gray);
+    color: var(--gray) !important;
     text-decoration: none;
 }
 
 .back-btn:hover a {
-    color: #76cc11;
+    color: var(--green-color) !important;
 }
 
 .back-btn span {
