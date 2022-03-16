@@ -96,7 +96,7 @@ main {
 }
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: 77px;
+    width: 60px;
 }
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn).lang {
@@ -143,6 +143,10 @@ button {
     margin-right: 1rem;
 }
 
+.container.country-container {
+    margin-right: 0;
+}
+
 .country-container {
     position: relative;
 }
@@ -155,6 +159,11 @@ button {
     background-color: white;
     width: 50%;
     padding: 1rem 1rem;
+    position: relative;
+    padding-top: 0;
+}
+
+.details {
     display: flex;
     justify-content: center;
 }
@@ -217,14 +226,18 @@ a:active {
     color: var(--gray) !important;
     font-size: var(--font-size-eleven);
     padding: 1rem;
-    width: 50%;
+    width: 100%;
     padding-bottom: 2rem !important;
 }
 .nav > div {
     /* flex: 0 0 0; */
     width: fit-content;
 }
-
+.sticky-container {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 main {
     display: flex;
 }
@@ -294,6 +307,7 @@ main > div {
     padding: 0 1rem;
     display: flex;
     justify-content: center;
+    padding-top: 5rem;
 }
 
 .right-container > div {
@@ -437,9 +451,15 @@ a:visited:active {
     }
     .nav {
         width: 100%;
+        padding: 1rem 0;
     }
 
     .bg {
         display: none;
+    }
+
+    .country-container .dropdown-menu {
+        right: 0;
+        left: auto;
     }
 }
