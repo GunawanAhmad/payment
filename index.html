@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Bootstrap Select Country</title>
+        <title>Payment Link</title>
         <meta charset="utf-8" />
         <meta
             name="viewport"
@@ -22,10 +22,6 @@
         <link
             rel="stylesheet"
             href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/xcode.min.css"
         />
 
         <link
@@ -162,7 +158,7 @@
                     <div class="details">
                         <div class="mt-5">
                             <div class="currency-picker-cont">
-                                <div class="container">
+                                <div class="container currency-container">
                                     <select
                                         class="selectpicker currency"
                                         data-live-search="true"
@@ -622,7 +618,7 @@
                                             Zimbabwean dollar
                                         </option>
                                     </select>
-                                    <div class="abrev">
+                                    <div class="abrev currency">
                                         <p class="abrev-text-3">WW</p>
                                         <span class="angle-icon">
                                             <i
@@ -688,6 +684,42 @@
                                         </p>
                                         <p class="cost">Rp1.000.000</p>
                                     </div>
+                                    <div class="cost-breakdown">
+                                        <p>
+                                            Item title lorem ipsum dolor sit
+                                            amet consectetur adipiscing elit sed
+                                            do eius tempor incididunt utsadasdw
+                                            labore
+                                        </p>
+                                        <p class="cost">Rp1.000.000</p>
+                                    </div>
+                                    <div class="cost-breakdown">
+                                        <p>
+                                            Item title lorem ipsum dolor sit
+                                            amet consectetur adipiscing elit sed
+                                            do eius tempor incididunt utsadasdw
+                                            labore
+                                        </p>
+                                        <p class="cost">Rp1.000.000</p>
+                                    </div>
+                                    <div class="cost-breakdown">
+                                        <p>
+                                            Item title lorem ipsum dolor sit
+                                            amet consectetur adipiscing elit sed
+                                            do eius tempor incididunt utsadasdw
+                                            labore
+                                        </p>
+                                        <p class="cost">Rp1.000.000</p>
+                                    </div>
+                                    <div class="cost-breakdown">
+                                        <p>
+                                            Item title lorem ipsum dolor sit
+                                            amet consectetur adipiscing elit sed
+                                            do eius tempor incididunt utsadasdw
+                                            labore
+                                        </p>
+                                        <p class="cost">Rp1.000.000</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -703,7 +735,7 @@
             </div>
             <div class="right-container">
                 <div>
-                    <h2 class="title">Choose payment method</h2>
+                    <h2 class="title mb-4">Choose payment method</h2>
                     <div>
                         <a href="" class="method-container empty">
                             <div class="img-container">
@@ -972,20 +1004,89 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="method-container accordion">
+                            <button
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#payment-3"
+                                aria-expanded="false"
+                                aria-controls="detail-cost-collapse"
+                                class="accordion-toggler"
+                            >
+                                <span>
+                                    <div class="img-container">
+                                        <img src="./src/qris.png" alt="" />
+                                    </div>
+
+                                    <p class="payment-info">
+                                        Payment fee: 1.5% (Total:
+                                        ZMW1,000,010,000)
+                                    </p>
+                                </span>
+                                <span class="arrow-icon">
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </span>
+                            </button>
+
+                            <div
+                                class="collapse accordion-tab qr-code"
+                                id="payment-3"
+                            >
+                                <div>
+                                    <p
+                                        class="text-center text-bold black-color"
+                                    >
+                                        Scan QRIS di bawah ini pakai aplikasi
+                                        bank/ewallet
+                                    </p>
+                                    <p class="text-center black-color">
+                                        (atau screenshot & upload ke aplikasi
+                                        bank/ewallet Anda)
+                                    </p>
+                                    <img
+                                        src="./src/qr.png"
+                                        alt=""
+                                        class="text-center"
+                                    />
+                                    <p class="text-center red-color text-bold">
+                                        QR Code di atas hanya dapat digunakan
+                                        untuk 1x transaksi!
+                                    </p>
+                                </div>
+                                <button
+                                    class="accordion-btn continue-btn bordered-btn"
+                                >
+                                    Saya sudah scan dan bayar
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
+        <footer class="bg-dark text-center p-5">
+            <img
+                src="./src/sociabuzz-logo-white.png"
+                class="mb-4 mx-auto d-block"
+                alt="footer image"
+            />
+            <a
+                href="mailto:support@sociabuzz.com"
+                class="text-white d-block mb-2"
+                >Term of use</a
+            >
+            <a
+                href="https://sociabuzz.freshdesk.com"
+                target="_blank"
+                class="text-white d-block mb-2"
+                >Privacy Policy
+            </a>
+        </footer>
 
         <!--Scripts-->
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>
-            hljs.initHighlightingOnLoad();
-        </script>
 
         <script src="dist/js/bootstrap-select-country.min.js"></script>
         <script src="./src/main.js"></script>
