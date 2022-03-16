@@ -1,9 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
 
@@ -38,6 +47,8 @@ body {
     position: absolute;
     width: 100%;
     z-index: -9999;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -47,11 +58,15 @@ body {
 
 .bg .gray-bg {
     background-color: var(--soft-gray);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
 }
 
 .bg .white-bg {
     background-color: white;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
 }
 
@@ -88,6 +103,8 @@ main {
 .details .abrev {
     top: 50%;
     left: 0%;
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
 }
 
@@ -123,6 +140,7 @@ button {
     outline: none !important;
 }
 .btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 .btn-default {
@@ -139,17 +157,27 @@ button {
 }
 .container {
     position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0;
     padding: 0 5px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-right: 1rem;
 }
 
 .container.currency-container {
     margin-top: 1rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     padding: 0 !important;
 }
@@ -176,11 +204,17 @@ button {
 }
 
 .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .accordion {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
     max-width: fit-content;
 }
 
@@ -196,12 +230,20 @@ button {
     background-color: white;
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
     transform: translateY(-55%);
     z-index: 99;
     left: 18px;
     pointer-events: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -221,6 +263,8 @@ button {
 
 .lang-container .abrev {
     left: 50% !important;
+    -webkit-transform: translate(-50%, -55%);
+    -ms-transform: translate(-50%, -55%);
     transform: translate(-50%, -55%);
 }
 .angle-icon {
@@ -238,8 +282,14 @@ a:active {
 }
 
 .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: var(--gray) !important;
     font-size: var(--font-size-eleven);
@@ -249,6 +299,8 @@ a:active {
 }
 .nav > div {
     /* flex: 0 0 0; */
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 .sticky-container {
@@ -257,10 +309,14 @@ a:active {
     z-index: 999;
 }
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 main > div {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
 }
 
@@ -286,6 +342,8 @@ main > div {
 }
 
 .currency-picker-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -302,6 +360,7 @@ main > div {
 
 .toggle-btn {
     background: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
     border: none;
     color: var(--green-color);
@@ -326,7 +385,11 @@ main > div {
     background-color: var(--soft-gray);
     width: 50%;
     padding: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-top: 5rem;
     padding-bottom: 2rem;
@@ -340,8 +403,15 @@ main > div {
     display: block;
     background-color: white;
     padding: 0.5rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
     border-radius: 10px;
@@ -450,6 +520,8 @@ a:visited:active {
     font-size: 1.5em;
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 0rem;
     color: var(--gray);
@@ -563,6 +635,9 @@ footer .row:first-of-type::after {
 
 @media (max-width: 700px) {
     main {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
