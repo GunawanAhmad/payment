@@ -25,3 +25,10 @@ $("#detail-cost-collapse").on("hide.bs.collapse", function () {
 $("#detail-cost-collapse").on("show.bs.collapse", function () {
     $(".toggle-details").text("Hide details");
 });
+
+$(".accordion").on("show.bs.collapse", function (e) {
+    $(e.target).parent().find(".arrow-icon").first().addClass("rotate");
+});
+$(".accordion").on("hide.bs.collapse", function (e) {
+    $(e.target).parent().find(".arrow-icon").first().removeClass("rotate");
+});

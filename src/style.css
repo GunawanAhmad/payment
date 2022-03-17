@@ -112,6 +112,10 @@ main {
     padding: 0;
 }
 
+.btn {
+    padding: 0;
+}
+
 .details .abrev-text-3 {
     font-weight: 700;
     font-size: var(--font-size-eighteen);
@@ -526,6 +530,17 @@ a:visited:active {
     transform: translateY(-50%);
     right: 0rem;
     color: var(--gray);
+    -webkit-transition: -webkit-transform 250ms ease;
+    transition: -webkit-transform 250ms ease;
+    -o-transition: transform 250ms ease;
+    transition: transform 250ms ease;
+    transition: transform 250ms ease, -webkit-transform 250ms ease;
+}
+
+.arrow-icon.rotate {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    -ms-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .help-text {
