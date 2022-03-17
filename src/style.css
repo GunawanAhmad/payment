@@ -775,7 +775,7 @@ footer .row:first-of-type::after {
 
     .country-container .dropdown-menu.show {
         max-width: 200px;
-        left: -400% !important;
+        left: -450% !important;
         transform: none !important;
         top: 100% !important;
     }
