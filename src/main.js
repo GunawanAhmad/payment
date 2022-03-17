@@ -2,7 +2,14 @@ $(document).ready(function () {
     $(".abrev-text-1").html($(".lang").val());
     $(".abrev-text-2").html($(".country").val());
     $(".abrev-text-3").html($(".currency").val());
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+            trigger: "hover",
+        });
+    });
+    console.log($(".btn"));
 });
+
 $(".lang").change(function (e) {
     $(".abrev-text-1").html(e.target.value);
     e.preventDefault();
