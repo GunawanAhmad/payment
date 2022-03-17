@@ -183,6 +183,7 @@ button {
     height: fit-content;
     padding: 0 !important;
     width: fit-content;
+    margin-right: 0.7rem;
 }
 
 .container.country-container {
