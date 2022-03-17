@@ -114,13 +114,17 @@ main {
     padding: 0;
 }
 
+.btn {
+    padding: 0 !important;
+}
+
 .details .abrev-text-3 {
     font-weight: 700;
     font-size: var(--font-size-eighteen);
 }
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: 60px;
+    width: 55px;
 }
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn).lang {
@@ -188,6 +192,7 @@ button {
 
 .container.country-container {
     margin-right: 0;
+    padding: 0px !important;
 }
 
 .country-container {
