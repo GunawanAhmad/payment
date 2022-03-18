@@ -705,8 +705,10 @@ footer .row:first-of-type::after {
 }
 
 .currency-picker-cont .dropdown-menu.show {
-    top: 0.5rem !important;
-    max-width: 250px !important;
+    top: 100% !important;
+    max-width: 270px !important;
+    transform: none !important;
+    min-width: 0 !important;
 }
 
 .dropdown-menu ul li .text {
