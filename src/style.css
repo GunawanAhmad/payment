@@ -25,15 +25,15 @@ body {
 }
 
 :root {
-    --font-size-ten: 0.833rem;
-    --font-size-eleven: 0.917rem;
-    --font-size-twelve: 1rem;
-    --font-size-eight: 0.667rem;
-    --font-size-seven: 0.583rem;
-    --font-size-fourteen: 1.167rem;
-    --font-size-eighteen: 1.5rem;
-    --font-size-fourty: 3.333rem;
-    --font-size-sixteen: 1.333rem;
+    --font-size-ten: 0.933rem;
+    --font-size-eleven: 1.1rem;
+    --font-size-twelve: 1.1rem;
+    --font-size-eight: 0.767rem;
+    --font-size-seven: 0.683rem;
+    --font-size-fourteen: 1.267rem;
+    --font-size-eighteen: 1.6rem;
+    --font-size-fourty: 3.533rem;
+    --font-size-sixteen: 1.433rem;
     --green-color: #76cc11;
     --soft-gray: #fafafa;
     --bg-gray: rgb(217, 217, 217);
@@ -89,7 +89,7 @@ main {
 
 .details
     .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: 88px;
+    width: 95px;
     border-radius: 5px;
 }
 
@@ -300,6 +300,9 @@ button {
     -ms-transform: translate(-50%, -55%);
     transform: translate(-50%, -55%);
 }
+.lang-container {
+    margin-right: 1.5rem;
+}
 .angle-icon {
     margin-left: 0.5rem;
 }
@@ -325,7 +328,7 @@ a:active {
     -ms-flex-align: center;
     align-items: center;
     color: var(--gray) !important;
-    font-size: var(--font-size-eleven);
+    font-size: var(--font-size-ten);
     padding: 1rem;
     width: 100%;
     padding-bottom: 2rem !important;
@@ -718,18 +721,50 @@ footer .row:first-of-type::after {
     display: block !important;
 }
 
+@media (max-width: 1100px) {
+    :root {
+        --font-size-fourty: 2.5rem;
+    }
+    .details .abrev-text-3 {
+        font-size: var(--font-size-twelve);
+    }
+
+    .right-container,
+    .details {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .container.currency-container {
+        margin-top: 0.3rem;
+    }
+    .details
+        .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+        width: 78px;
+    }
+}
+
 @media (min-width: 768px) {
     footer {
         padding: 90px 0 70px;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+    :root {
+        --font-size-fourty: 2.5rem;
+    }
+
     main {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+    }
+
+    .details
+        .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+        width: 75px;
+        /* margin-right: 0; */
     }
 
     .left-container,
@@ -738,9 +773,7 @@ footer .row:first-of-type::after {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    .container.currency-container {
-        margin-right: 0.5rem;
-    }
+
     .right-container {
         padding-top: 2rem;
     }
@@ -774,19 +807,19 @@ footer .row:first-of-type::after {
 
 @media (max-width: 550px) {
     :root {
-        --font-size-fourty: 1.667rem;
-        --font-size-fourteen: 0.833rem;
+        --font-size-fourty: 2rem;
+        /* --font-size-fourteen: 0.833rem;
         --font-size-sixteen: 0.917rem;
         --font-size-ten: 0.75rem;
-        --font-size-eight: 0.583rem;
+        --font-size-eight: 0.583rem; */
     }
     .details .abrev-text-3 {
         font-size: var(--font-size-ten);
     }
     .details
         .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-        width: 65px;
-        margin-right: 0;
+        width: 75px;
+        /* margin-right: 0; */
     }
 
     .container.currency-container {
@@ -795,5 +828,9 @@ footer .row:first-of-type::after {
 
     .dropdown-menu.show {
         max-width: 300px;
+    }
+
+    .currency-picker-cont p {
+        font-size: var(--font-size-eleven);
     }
 }
