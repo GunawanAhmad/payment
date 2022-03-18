@@ -52,6 +52,20 @@ body {
     display: flex;
 }
 
+.bg .gray-bg {
+    background-color: var(--soft-gray);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+}
+
+.bg .white-bg {
+    background-color: white;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+}
+
 .red-color {
     color: var(--red-color);
 }
@@ -750,6 +764,9 @@ footer .row:first-of-type::after {
 
     .details {
         display: block;
+    }
+    .bg {
+        display: none;
     }
 }
 
