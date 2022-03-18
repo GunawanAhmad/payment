@@ -7,8 +7,13 @@ $(document).ready(function () {
             trigger: "hover",
         });
     });
-    console.log($(".btn"));
+    selectpicker();
 });
+
+async function selectpicker() {
+    await $(".selectpick").selectpicker();
+    console.log($(".btn"));
+}
 
 $(".lang").change(function (e) {
     $(".abrev-text-1").html(e.target.value);
