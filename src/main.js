@@ -22,16 +22,16 @@ async function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
     $(".btn").attr("data-tooltip", "tooltip");
     $(".lang-container .btn").attr(
         "data-original-title",
-        "Language : " + selectedLang
+        "Language: " + selectedLang
     );
     $(".country-container .btn").attr(
         "data-original-title",
-        "Coutry : " + selectedCountry
+        "Country: " + selectedCountry
     );
 
     $(".currency-container .btn").attr(
         "data-original-title",
-        "Currency : " + selectedCurrency
+        "Currency: " + selectedCurrency
     );
     $(".btn").attr("data-placement", "top");
     $('[data-tooltip="tooltip"]').tooltip({
@@ -42,10 +42,7 @@ async function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
 $(".lang").change(function (e) {
     $(".abrev-text-1").html(e.target.value);
     let title = e.target.options[e.target.selectedIndex].innerHTML;
-    $(".lang-container .btn").attr(
-        "data-original-title",
-        "Language : " + title
-    );
+    $(".lang-container .btn").attr("data-original-title", "Language: " + title);
     e.preventDefault();
 });
 
@@ -54,7 +51,7 @@ $(".country").change(function (e) {
     let title = e.target.options[e.target.selectedIndex].innerHTML;
     $(".country-container .btn").attr(
         "data-original-title",
-        "Coutry : " + title
+        "Country: " + title
     );
 
     e.preventDefault();
@@ -65,7 +62,7 @@ $(".currency").change(function (e) {
     let title = e.target.options[e.target.selectedIndex].innerHTML;
     $(".currency-container .btn").attr(
         "data-original-title",
-        "Currency : " + title
+        "Currency: " + title
     );
     e.preventDefault();
 });
