@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $(".loading-container").css("display", "none");
     $(".abrev-text-1").html($(".lang").val());
     $(".abrev-text-2").html($(".country").val());
     $(".abrev-text-3").html($(".currency").val());
