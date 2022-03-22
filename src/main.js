@@ -16,6 +16,7 @@ $(document).ready(function () {
             .innerHTML;
 
     selectpicker(selectedLang, selectedCountry, selectedCurrency);
+    $(".country-container select").val("AF");
 });
 
 async function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
@@ -39,6 +40,12 @@ async function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
         trigger: "hover",
         container: "body",
     });
+
+    //fixing Safari 14/15 tooltip bug
+    $(".selectpick.country").selectpicker("toggle");
+    $(".selectpick.country").selectpicker("toggle");
+    let val = $(".country-container select").val();
+    $(".country-container select").val(val);
 }
 
 $(".lang").change(function (e) {
@@ -82,4 +89,11 @@ $(".accordion").on("show.bs.collapse", function (e) {
 });
 $(".accordion").on("hide.bs.collapse", function (e) {
     $(e.target).parent().find(".arrow-icon").first().removeClass("rotate");
+});
+
+//fixing Safari 14/15 tooltip bug
+$(".selectpick.country").on("hide.bs.select", function () {
+    let value = this.value;
+    $(".country-container select").val("");
+    $(".country-container select").val(value);
 });
