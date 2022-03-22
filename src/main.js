@@ -37,6 +37,7 @@ async function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
     $(".btn").attr("data-placement", "top");
     $('[data-tooltip="tooltip"]').tooltip({
         trigger: "hover",
+        container: "body",
     });
 }
 
