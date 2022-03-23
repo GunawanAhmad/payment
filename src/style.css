@@ -147,7 +147,7 @@ button {
 }
 
 .container.currency-container {
-    margin-top: 0rem;
+    margin-top: 0.9rem;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -250,7 +250,6 @@ button {
     border: 1px solid black;
     padding: 0rem 0.5rem;
     border-radius: 5px;
-    margin-top: 0.9rem;
 }
 
 .nav-icon {
@@ -260,13 +259,6 @@ button {
 
 .nav-icon.location {
     font-size: 1.05rem;
-}
-
-.lang-container .abrev {
-    /* left: 50% !important;
-    -webkit-transform: translate(-50%, -55%);
-    -ms-transform: translate(-50%, -55%);
-    transform: translate(-50%, -55%); */
 }
 
 .lang-container {
@@ -782,7 +774,7 @@ footer .row:first-of-type::after {
         padding-right: 2rem;
     }
 
-    .abrev.currency {
+    .container.currency-container {
         margin-top: 0.6rem;
     }
 }
@@ -867,7 +859,7 @@ footer .row:first-of-type::after {
         font-size: var(--font-size-eleven) !important;
     }
 
-    .abrev.currency {
+    .container.currency-container {
         margin-top: 0.5rem;
     }
 
