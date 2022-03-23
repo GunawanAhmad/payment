@@ -71,12 +71,6 @@ main {
     color: var(--darker-gray);
 }
 
-.details
-    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: 95px;
-    border-radius: 5px;
-}
-
 .currency-picker-cont .btn:not(:disabled):not(.disabled) {
     padding: 0.5rem 0;
 }
@@ -84,14 +78,6 @@ main {
 .details .filter-option.pull-left {
     font-weight: 700;
     font-size: 1.6rem;
-}
-
-.details .abrev {
-    top: 50%;
-    left: 0%;
-    -webkit-transform: translate(0%, -50%);
-    -ms-transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
 }
 
 .details .btn {
@@ -104,12 +90,11 @@ main {
 }
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: 65px;
-}
-
-.country-container
-    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: 55px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .btn-default.active,
@@ -163,7 +148,7 @@ button {
 }
 
 .container.currency-container {
-    margin-top: 0.9rem;
+    margin-top: 0rem;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -246,13 +231,6 @@ button {
 }
 .abrev {
     background-color: white;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-55%);
-    -ms-transform: translateY(-55%);
-    transform: translateY(-55%);
-    z-index: 99;
-    left: 0px;
     pointer-events: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -263,7 +241,6 @@ button {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-top: 0.15rem;
 }
 
 .abrev:hover {
@@ -272,8 +249,9 @@ button {
 
 .abrev.currency {
     border: 1px solid black;
-    padding: 0.05rem 0.5rem;
+    padding: 0rem 0.5rem;
     border-radius: 5px;
+    margin-top: 0.9rem;
 }
 
 .nav-icon {
@@ -282,16 +260,16 @@ button {
 }
 
 .nav-icon.location {
-    margin-bottom: 0rem;
     font-size: 1.05rem;
 }
 
 .lang-container .abrev {
-    left: 50% !important;
+    /* left: 50% !important;
     -webkit-transform: translate(-50%, -55%);
     -ms-transform: translate(-50%, -55%);
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%); */
 }
+
 .lang-container {
     margin-right: 1rem;
 }
@@ -382,6 +360,18 @@ main > div {
     margin-top: 0;
 }
 
+.abrev.currency h1 {
+    line-height: 0.7;
+    width: 0;
+    pointer-events: none;
+    transform: scaleX(0);
+    color: transparent;
+}
+
+.abrev.currency p {
+    line-height: 0;
+}
+
 .currency-picker-cont p {
     font-size: var(--font-size-fourteen);
 }
@@ -460,6 +450,7 @@ main > div {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.4;
 }
 
 .method-container.group .img-container {
@@ -477,10 +468,6 @@ main > div {
     margin-right: 0.4rem;
     margin-left: 0.4rem;
     margin-top: 0.8rem;
-}
-
-.method-container.group .img-container img:last-child {
-    margin-right: 0;
 }
 
 .accordion-tab .img-container img {
@@ -795,12 +782,9 @@ footer .row:first-of-type::after {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    .container.currency-container {
-        margin-top: 0.3rem;
-    }
-    .details
-        .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-        width: 78px;
+
+    .abrev.currency {
+        margin-top: 0.6rem;
     }
 }
 
@@ -820,12 +804,6 @@ footer .row:first-of-type::after {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-    }
-
-    .details
-        .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-        width: 75px;
-        /* margin-right: 0; */
     }
 
     .left-container,
@@ -852,12 +830,6 @@ footer .row:first-of-type::after {
         max-width: 300px;
     }
 
-    .details
-        .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-        width: 85px;
-        margin-right: 0;
-    }
-
     .details {
         display: block;
     }
@@ -874,11 +846,6 @@ footer .row:first-of-type::after {
     }
     .details .abrev-text-3 {
         font-size: var(--font-size-ten);
-    }
-    .details
-        .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-        width: 75px;
-        /* margin-right: 0; */
     }
 
     .container.currency-container {
@@ -899,5 +866,13 @@ footer .row:first-of-type::after {
 
     .right-container .title {
         font-size: var(--font-size-eleven) !important;
+    }
+
+    .abrev.currency {
+        margin-top: 0.5rem;
+    }
+
+    .abrev.currency span {
+        line-height: 0;
     }
 }
