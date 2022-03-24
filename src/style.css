@@ -790,6 +790,16 @@ footer .row:first-of-type::after {
         -ms-flex-direction: column;
         flex-direction: column;
     }
+    body {
+        overflow-x: hidden;
+    }
+
+    .right-container {
+        position: relative !important;
+    }
+    .sticky-container {
+        position: relative !important;
+    }
 
     .left-container,
     .right-container {
