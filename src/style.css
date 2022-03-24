@@ -353,16 +353,8 @@ main > div {
     margin-top: 0;
 }
 
-.abrev.currency h1 {
-    line-height: 0.7;
-    width: 0;
-    pointer-events: none;
-    transform: scaleX(0);
-    color: transparent;
-}
-
 .abrev.currency p {
-    line-height: 0;
+    line-height: 1.5;
 }
 
 .currency-picker-cont p {
