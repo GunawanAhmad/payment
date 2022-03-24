@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 
 * {
@@ -154,6 +161,8 @@ button {
     height: -moz-fit-content;
     height: fit-content;
     padding: 0 !important;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-right: 0.7rem;
 }
@@ -213,6 +222,8 @@ button {
     -ms-flex-pack: center;
     justify-content: center;
     padding: 0 5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: auto;
 }
@@ -398,6 +409,8 @@ main > div {
     padding-bottom: 2rem;
     position: sticky;
     top: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -439,8 +452,13 @@ main > div {
 }
 
 .method-container.group .img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-top: -0.5rem;
     max-width: 80%;
@@ -503,6 +521,7 @@ a:visited:active {
 
 .method-container:hover {
     text-decoration: none;
+    -webkit-box-shadow: 0 0 16px rgb(0 0 0 / 10%) !important;
     box-shadow: 0 0 16px rgb(0 0 0 / 10%) !important;
 }
 .method-container.inactive img {
@@ -703,6 +722,7 @@ footer .row:first-of-type::after {
     border: 5px solid black;
     border-bottom: 5px solid transparent;
     border-radius: 50%;
+    -webkit-animation: spin 900ms linear infinite forwards;
     animation: spin 900ms linear infinite forwards;
 }
 
@@ -716,16 +736,35 @@ footer .row:first-of-type::after {
     left: 0;
     top: 0;
     z-index: 999999;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
     from {
+        -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
     to {
+        -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
@@ -735,6 +774,8 @@ footer .row:first-of-type::after {
     max-width: 250px !important;
     left: auto !important;
     right: 0 !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
     transform: none !important;
     top: 100% !important;
     min-width: 0 !important;
@@ -743,12 +784,15 @@ footer .row:first-of-type::after {
 .currency-picker-cont .dropdown-menu.show {
     top: 100% !important;
     max-width: 270px !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
     transform: none !important;
     min-width: 0 !important;
 }
 
 .dropdown-menu ul li .text {
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: block !important;
