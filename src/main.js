@@ -35,9 +35,10 @@ async function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
         "data-original-title",
         "Currency: " + selectedCurrency
     );
-    $(".btn").attr("data-placement", "left");
-    $(".currency-container .btn").attr("data-placement", "top");
-    $('[data-tooltip="tooltip"]').tooltip();
+    $(".btn").attr("data-placement", "top");
+    $('[data-tooltip="tooltip"]').tooltip({
+        trigger: "hover",
+    });
 }
 
 $(".lang").change(function (e) {
