@@ -37,21 +37,8 @@ async function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
     );
     $(".btn").attr("data-placement", "left");
     $(".currency-container .btn").attr("data-placement", "top");
-    $('[data-tooltip="tooltip"]')
-        .tooltip({
-            trigger: "manual",
-        })
-        .focus(showTooltip)
-        .hover(showTooltip, hideTooltip);
+    $('[data-tooltip="tooltip"]').tooltip();
 }
-
-var showTooltip = function () {
-    $(".tooltip").remove(); // This line removes any currently showing tootltips
-    $(this).tooltip("show");
-};
-var hideTooltip = function () {
-    $(this).tooltip("hide");
-};
 
 $(".lang").change(function (e) {
     $(".abrev-text-1").html(e.target.value);
