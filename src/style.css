@@ -70,8 +70,10 @@ main {
     color: var(--darker-gray);
 }
 
-.currency-picker-cont .btn:not(:disabled):not(.disabled) {
-    padding: 0.5rem 0;
+.btn:not(:disabled):not(.disabled) {
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .details .filter-option.pull-left {
