@@ -39,6 +39,12 @@ async function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
     $('[data-tooltip="tooltip"]').tooltip({
         trigger: "hover",
     });
+
+    //fixing Safari 14/15 tooltip bug
+    $(".selectpick.country").selectpicker("toggle");
+    $(".selectpick.country").selectpicker("toggle");
+    let val = $(".country-container select").val();
+    $(".country-container select").val(val);
 }
 
 $(".lang").change(function (e) {
