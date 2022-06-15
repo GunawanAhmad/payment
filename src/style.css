@@ -60,7 +60,8 @@ body {
     font-size: var(--font-size-fourteen) !important;
 }
 
-a {
+a,
+button {
     color: black;
 }
 
