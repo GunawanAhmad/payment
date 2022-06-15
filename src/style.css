@@ -60,6 +60,10 @@ body {
     font-size: var(--font-size-fourteen) !important;
 }
 
+a {
+    color: black;
+}
+
 p {
     margin-bottom: 0;
 }
