@@ -524,6 +524,31 @@ a:visited:active {
     text-decoration: none;
 }
 
+.method-container.info .icon {
+    color: black;
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+}
+.method-container.info {
+    background-color: #f4f4f4;
+    padding-bottom: 14px;
+    padding-top: 12px;
+}
+
+.method-container.info:hover {
+    box-shadow: none !important;
+}
+
+.method-container.info p {
+    color: black;
+    font-size: 0.75rem;
+    line-height: 170%;
+}
+
+.method-container.info .country-name {
+    font-weight: 700;
+}
+
 .method-container:hover {
     text-decoration: none;
     -webkit-box-shadow: 0 0 16px rgb(0 0 0 / 10%) !important;
