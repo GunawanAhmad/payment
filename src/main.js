@@ -4,14 +4,14 @@ $(document).ready(function () {
     $(".abrev-text-2").html($(".country").val());
     $(".abrev-text-3").html($(".currency").val());
 
-    let langSelectorElm = document.querySelector(".selectpick.lang");
-    let selectedLang =
+    var langSelectorElm = document.querySelector(".selectpick.lang");
+    var selectedLang =
         langSelectorElm.options[langSelectorElm.selectedIndex].innerHTML;
-    let countrySelectorElm = document.querySelector(".selectpick.country");
-    let selectedCountry =
+    var countrySelectorElm = document.querySelector(".selectpick.country");
+    var selectedCountry =
         countrySelectorElm.options[countrySelectorElm.selectedIndex].innerHTML;
-    let currencySelectorElm = document.querySelector(".selectpick.currency");
-    let selectedCurrency =
+    var currencySelectorElm = document.querySelector(".selectpick.currency");
+    var selectedCurrency =
         currencySelectorElm.options[currencySelectorElm.selectedIndex]
             .innerHTML;
 
@@ -43,20 +43,20 @@ function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
     //fixing Safari 14/15 tooltip bug
     $(".selectpick.country").selectpicker("toggle");
     $(".selectpick.country").selectpicker("toggle");
-    let val = $(".country-container select").val();
+    var val = $(".country-container select").val();
     $(".country-container select").val(val);
 }
 
 $(".lang").change(function (e) {
     $(".abrev-text-1").html(e.target.value);
-    let title = e.target.options[e.target.selectedIndex].innerHTML;
+    var title = e.target.options[e.target.selectedIndex].innerHTML;
     $(".lang-container .btn").attr("data-original-title", "Language: " + title);
     e.preventDefault();
 });
 
 $(".country").change(function (e) {
     $(".abrev-text-2").html(e.target.value);
-    let title = e.target.options[e.target.selectedIndex].innerHTML;
+    var title = e.target.options[e.target.selectedIndex].innerHTML;
     $(".country-container .btn").attr(
         "data-original-title",
         "Country: " + title
@@ -67,7 +67,7 @@ $(".country").change(function (e) {
 
 $(".currency").change(function (e) {
     $(".abrev-text-3").html(e.target.value);
-    let title = e.target.options[e.target.selectedIndex].innerHTML;
+    var title = e.target.options[e.target.selectedIndex].innerHTML;
     $(".currency-container .btn").attr(
         "data-original-title",
         "Currency: " + title
