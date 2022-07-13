@@ -72,6 +72,7 @@ p {
 main {
     margin: auto;
     min-height: calc(100vh);
+    overflow-x: hidden;
 }
 
 .eightpx-text {
