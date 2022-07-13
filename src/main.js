@@ -19,8 +19,8 @@ $(document).ready(function () {
     $(".country-container select").val("AF");
 });
 
-async function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
-    await $(".selectpick").selectpicker();
+function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
+    $(".selectpick").selectpicker();
     $(".btn").attr("data-tooltip", "tooltip");
     $(".lang-container .btn").attr(
         "data-original-title",
