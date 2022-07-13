@@ -38,6 +38,7 @@ function selectpicker(selectedLang, selectedCountry, selectedCurrency) {
     $(".btn").attr("data-placement", "top");
     $('[data-tooltip="tooltip"]').tooltip({
         trigger: "hover",
+        container: "body",
     });
 
     //fixing Safari 14/15 tooltip bug
