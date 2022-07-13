@@ -12,8 +12,6 @@
 * Browsers: last 4 version
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
-
 * {
     margin: 0;
     padding: 0;
@@ -50,6 +48,23 @@ body {
     --gray: rgb(191, 191, 191);
     --darker-gray: rgb(127, 127, 127);
     --red-color: #ff0000;
+}
+
+button,
+label,
+p,
+a,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", sans-serif !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .red-color {
