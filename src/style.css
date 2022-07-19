@@ -462,6 +462,9 @@ main > div {
     margin-bottom: 1rem;
     position: relative;
     min-width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     text-decoration: none;
 }
 
