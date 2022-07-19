@@ -34,6 +34,155 @@
     </head>
 
     <body>
+        <!-- Modal Virtual account -->
+        <div
+            class="modal fade show"
+            id="VaModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="VaModalTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <div class="modal-body">
+                        <h2
+                            class="text-center font-weight-bold font-s-20 mb-5px line-h-15"
+                        >
+                            Make payment to
+                        </h2>
+                        <div class="bank-logo mb-19px">
+                            <img src="./src/logo/bca.svg" alt="" />
+                        </div>
+                        <p class="text-center font-s-14 mb-1 line-h-15">
+                            Virtual Account Number
+                        </p>
+                        <h1
+                            class="text-center font-weight-x-bold mb-8px line-h-13 font-s-26"
+                        >
+                            198726391872639817
+                        </h1>
+                        <button
+                            class="btn-1 mb-21px font-s-10 line-h-15"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Copied"
+                            id="copy-btn"
+                            data-copy="198726391872639817"
+                        >
+                            <span><i class="fa-regular fa-copy"></i></span> Copy
+                            number
+                        </button>
+                        <p class="text-center line-h-15 font-s-14">
+                            Virtual Account Name
+                        </p>
+                        <p
+                            class="text-center line-h-15 font-s-20 font-weight-bold mb-13px"
+                        >
+                            SociaBuzz / Xendit
+                        </p>
+                        <p class="text-center line-h-15 font-s-14 mb-1px">
+                            Total Payment
+                        </p>
+                        <p
+                            class="text-center line-h-15 font-s-20 font-weight-bold mb-13px"
+                        >
+                            IDR150,750,000.65
+                        </p>
+                        <div
+                            class="gray-bg d-flex flex-column align-items-center mb-30px"
+                        >
+                            <span class="black">
+                                <i class="fa-regular fa-clock"></i>
+                            </span>
+                            <p class="text-center line-h-15 font-s-14">
+                                Please complete payment before:
+                            </p>
+                            <p
+                                class="text-center line-h-15 font-s-14 font-weight-bold"
+                            >
+                                21 Jun 2022 - 08:30 UTC+7
+                            </p>
+                        </div>
+                        <button class="btn-2">I have paid</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal QRIS -->
+        <div
+            class="modal fade show"
+            id="QrisModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="QrisModalTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <div class="modal-body">
+                        <h2
+                            class="text-center font-weight-bold font-s-20 mb-5px line-h-15"
+                        >
+                            Scan the QRIS below using a bank/ewallet app
+                        </h2>
+
+                        <p class="text-center font-s-16 mb-15px line-h-15">
+                            (or take a screenshot and upload it to your
+                            bank/ewallet app)
+                        </p>
+                        <div class="qris-logo">
+                            <img src="./src/logo/qris.svg" alt="" />
+                        </div>
+                        <div class="qr-code mb-1px">
+                            <img src="./src/qr.png" alt="" />
+                        </div>
+                        <p class="text-center line-h-15 font-s-12 mb-1px">
+                            Total Payment
+                        </p>
+                        <p
+                            class="text-center line-h-15 font-s-16 font-weight-bold mb-10px"
+                        >
+                            IDR150,750,000.65
+                        </p>
+                        <div
+                            class="warn d-flex flex-column align-items-center mb-30px"
+                        >
+                            <span class="red font-s-20">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </span>
+                            <p
+                                class="text-center line-h-15 font-s-14 font-weight-bold"
+                            >
+                                The QR Code above can only be used for 1x
+                                transaction!
+                            </p>
+                        </div>
+                        <button class="btn-2">I have scanned and paid</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="loading-container">
             <div class="loading"></div>
         </div>
@@ -1313,6 +1462,20 @@
                                 </div>
                             </div>
                         </div>
+                        <a
+                            class="method-container"
+                            type="button"
+                            data-toggle="modal"
+                            data-target="#QrisModal"
+                        >
+                            <div class="img-container">
+                                <img src="./src/logo/qris.svg" alt="" />
+                            </div>
+                            <p class="payment-info">
+                                Your Gopay balance: IDR1,000,000 | Payment fee:
+                                1.5% (Total: ZMW 1,000,010,000)
+                            </p>
+                        </a>
                         <div class="method-container accordion">
                             <button
                                 type="button"
@@ -1882,7 +2045,12 @@
 
                             <div class="collapse accordion-tab" id="payment-8">
                                 <div>
-                                    <a href="" class="method-container">
+                                    <a
+                                        class="method-container"
+                                        type="button"
+                                        data-toggle="modal"
+                                        data-target="#VaModal"
+                                    >
                                         <div class="img-container">
                                             <img
                                                 src="./src/logo/bca.svg"
