@@ -1142,3 +1142,10 @@ footer .row:first-of-type::after {
 .red {
     color: #ff0000;
 }
+
+@media (max-width: 600px) {
+    .modal-body {
+        padding-left: 19px;
+        padding-right: 19px;
+    }
+}
