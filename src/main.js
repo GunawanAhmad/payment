@@ -104,18 +104,12 @@ function fallbackCopyTextToClipboard(text) {
     // Avoid scrolling to bottom
     textArea.style.top = "0";
     textArea.style.left = "0";
-    textArea.style.height = "0px";
-    textArea.style.width = "0px";
     textArea.style.opacity = "0";
-    textArea.style.position = "fixed";
+    textArea.style.width = "0px";
+    textArea.style.height = "0px";
+    textArea.style.position = "absolute";
 
-    var selection = document.getSelection();
-    var range = document.createRange();
-    range.selectNode(textArea);
-    selection.removeAllRanges();
-    selection.addRange(range);
-
-    document.body.appendChild(textArea);
+    $("#VaModal").append(textArea);
     textArea.focus();
     textArea.select();
 
@@ -126,8 +120,11 @@ function fallbackCopyTextToClipboard(text) {
     } catch (err) {
         console.error("Fallback: Oops, unable to copy", err);
     }
-    selection.removeAllRanges();
-    document.body.removeChild(textArea);
+    $("#copy-btn").tooltip("show");
+    $(textArea).remove();
+    tooltipTimeout();
+
+    // document.body.removeChild(textArea);
 }
 function copyTextToClipboard(text) {
     if (!navigator.clipboard) {
