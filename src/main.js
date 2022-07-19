@@ -104,7 +104,16 @@ function fallbackCopyTextToClipboard(text) {
     // Avoid scrolling to bottom
     textArea.style.top = "0";
     textArea.style.left = "0";
+    textArea.style.height = "0px";
+    textArea.style.width = "0px";
+    textArea.style.opacity = "0";
     textArea.style.position = "fixed";
+
+    var selection = document.getSelection();
+    var range = document.createRange();
+    range.selectNode(textArea);
+    selection.removeAllRanges();
+    selection.addRange(range);
 
     document.body.appendChild(textArea);
     textArea.focus();
@@ -117,7 +126,7 @@ function fallbackCopyTextToClipboard(text) {
     } catch (err) {
         console.error("Fallback: Oops, unable to copy", err);
     }
-
+    selection.removeAllRanges();
     document.body.removeChild(textArea);
 }
 function copyTextToClipboard(text) {
