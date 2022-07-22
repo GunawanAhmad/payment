@@ -1081,6 +1081,7 @@ footer .row:first-of-type::after {
 .modal .gray-bg {
     padding: 12px 16px;
     border-radius: 15px;
+    padding-top: 8px;
 }
 
 .btn-1 {
@@ -1118,6 +1119,7 @@ footer .row:first-of-type::after {
     border: 1px solid #ff0000;
     border-radius: 15px;
     padding: 12px 16px;
+    padding-top: 8px;
     color: #ff0000;
 }
 
