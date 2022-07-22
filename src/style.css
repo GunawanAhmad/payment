@@ -1070,7 +1070,7 @@ footer .row:first-of-type::after {
 }
 
 .modal .bank-logo {
-    height: 53px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1114,6 +1114,10 @@ footer .row:first-of-type::after {
     padding: 6px 12px;
     background: none;
     text-decoration: none;
+}
+
+.btn-1 .icon {
+    margin-right: 2px;
 }
 
 .btn-2 {
